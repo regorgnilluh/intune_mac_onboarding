@@ -21,8 +21,8 @@
 
 # User Defined variables
 
-onboardingScriptsUrl="https://github.com/microsoft/shell-intune-samples/raw/master/macOS/Config/Swift%20Dialog/onboarding_scripts.zip" # Enter your own URL here
-appname="onBoarding"                                                 
+onboardingScriptsUrl="https://github.com/regorgnilluh/intune_mac_onboarding/raw/master/package/onboarding_scripts.zip" # Enter your own URL here
+appname="EasitMacOnBoarding"                                                 
 logandmetadir="/Library/Application Support/Microsoft/IntuneScripts/$appname"   # The location of our logs and last updated data
 enrollmentWindowHours=1                                                         # The number of hours after enrollment that the script should run
 checkEnrollmentTime=true                                                        # Should we check the enrollment time? (Do NOT set this to false in production!!)
@@ -32,7 +32,7 @@ tempdir=$(mktemp -d)
 log="$logandmetadir/$appname.log"                                               # The location of the script log file
 metafile="$logandmetadir/$appname.meta"                                         # The location of our meta file (for updates)
 
-logandmetadir="/Library/Application Support/Microsoft/IntuneScripts/onBoarding"
+logandmetadir="/Library/Application Support/Microsoft/IntuneScripts/$appname"
 
 # Start logging
 if [[ ! -d "$logandmetadir" ]]; then
